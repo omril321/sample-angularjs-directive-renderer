@@ -1,0 +1,15 @@
+.cat-name {
+    font-family: monospace;
+    margin-bottom: 5px;
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+.derp-cat-image {
+    border: red 4px solid;
+}
+
+.cute-cat-image {
+    width: 210px;
+    border: blue 4px dashed;
+}

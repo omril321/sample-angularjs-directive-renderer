@@ -16,31 +16,24 @@
     "render"
   ],
   "dependencies": {
-    "angular": "1.5.11",
     "babel-core": "6.26.0",
     "babel-loader": "7.1.2",
-    "babel-preset-env": "1.6.0",
-    "raw-loader": "0.5.1"
+    "babel-preset-env": "1.6.0"
   },
   "devDependencies": {
     "concurrently": "3.5.0",
     "cypress": "^3.0.2",
-    "start-server-and-test": "^1.7.0",
-    "webpack": "4.2.0",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "http-server": "^0.11.1",
+    "start-server-and-test": "^1.7.0"
   },
   "scripts": {
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
     "serve": "http-server ./public -p 5000",
     "serve:test": "http-server ./cypress/integration/testServerBase/ -p 5000",
-    "build": "webpack",
-    "build:watch": "webpack --watch",
     "test": "start-server-and-test serve:test http://localhost:5000 cypress",
     "test:open": "start-server-and-test serve:test http://localhost:5000 cypress:open",
     "cypress:open": "cypress open",
-    "cypress": "cypress run",
-    "wds": "webpack-dev-server"
+    "cypress": "cypress run"
   },
   "repository": {
     "type": "git",
