@@ -1,5 +1,5 @@
 {
-  "name": "angularjs-directive-renderer",
+  "name": "sample-angularjs-directive-renderer",
   "version": "0.0.0",
   "description": "An example project showing how to use the directive test library angularjs-directive-renderer (https://github.com/omril321/angularjs-directive-renderer)",
   "author": "Omri Lavi",
@@ -21,6 +21,7 @@
     "babel-preset-env": "1.6.0"
   },
   "devDependencies": {
+    "angularjs-directive-renderer": "^2.0.3",
     "concurrently": "3.5.0",
     "cypress": "^3.0.2",
     "http-server": "^0.11.1",
@@ -29,9 +30,9 @@
   "scripts": {
     "start": "concurrently \"npm run build:watch\" \"npm run serve\"",
     "serve": "http-server ./public -p 5000",
-    "serve:test": "http-server ./cypress/integration/testServerBase/ -p 5000",
-    "test": "start-server-and-test serve:test http://localhost:5000 cypress",
-    "test:open": "start-server-and-test serve:test http://localhost:5000 cypress:open",
+    "serve:test": "http-server ./public -p 5001",
+    "test": "start-server-and-test serve:test http://localhost:5001 cypress",
+    "test:open": "start-server-and-test serve:test http://localhost:5001 cypress:open",
     "cypress:open": "cypress open",
     "cypress": "cypress run"
   },
