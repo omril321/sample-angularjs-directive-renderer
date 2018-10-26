@@ -1,25 +1,25 @@
 An example project showing how to use the directive test library [angularjs-directive-renderer](https://github.com/omril321/angularjs-directive-renderer)
 
 In this example, we will define a single directive in the app, called `awesome-cat`.  
-The directive has two states, defined by the boolean scope variable `derp`.  
-`derp` will affect on which image will be presented, and which css class will be applied to the image.  
+The directive has two states, defined by the boolean scope variable `beCute`.  
+`beCute` will affect on which image will be presented, and which css class will be applied to the image.  
 In tests, we would like to see that our directive is being rendered properly in both states, with the expected styling:  
-1. `derp = true`: a derp cat should be displayed with a **red** border.
-2. `derp = false`: a cute cat should be displayed with a **blue** border.
+1. `beCute = true`: a cute cat should be displayed with a **red** border.
+2. `beCute = false`: a serious cat should be displayed with a **blue** border.
 
 Using `angularjs-directive-rendered` lib, we can easily test both states, using the following line:
 ```javascript 1.7
-const scope = {data: {shouldDerp: true}};
+const scope = {data: {beCute: true}};
 
 cy.renderIsolatedDirective({
-    templateToCompile: '<awesome-cat derp="data.shouldDerp"></awesome-cat>',
+    templateToCompile: '<awesome-cat be-cute="data.beCute"></awesome-cat>',
     injectedScopeProperties: scope
 });
 ```
 ![Cute Cat](./doc/cute_cat.png)
 
-And for a derp cat:  
-![Derp Cat](./doc/derp_cat.png)
+And for a serious cat:  
+![Serious Cat](./doc/serious_cat.png)
 
 
 #### Usage
